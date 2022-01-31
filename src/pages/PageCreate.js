@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlexColumn, Container,  AuthWrapper, StyledH1, StyledSelect, StyledOption } from '../components/Commons';
+import { FlexColumn, Container,  AuthWrapper, StyledH1, StyledSelect, StyledOption, LabelWrapper, StyledLabel } from '../components/Commons';
 import Input from '../components/Forms/Input';
 import Textarea from '../components/Forms/Textarea';
 import Button from '../components/Button';
@@ -34,12 +34,15 @@ export default function PageCreate(){
         <Container style={{justifyContent: 'center'}}>
           <AuthWrapper onSubmit={handlePageCreation}>
             <StyledH1>Start creating here.</StyledH1>
+            <LabelWrapper>
+              <StyledLabel>What's the page title?</StyledLabel>
+            </LabelWrapper>
             <Input 
               type='text'
               value={page.pageTitle}
               onInput={handleChange}
               name='pageTitle'
-              placeholder={"Page Title"}
+              // placeholder={"Page Title"}
             />
             
             <Textarea 
@@ -47,7 +50,7 @@ export default function PageCreate(){
               value={page.content}
               onChange={handleChange}
               name='content'
-              placeholder={"Write the page content here."}
+              // placeholder={"Write the page content here."}
             >
             </Textarea>
 
