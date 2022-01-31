@@ -1,23 +1,24 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import { StyledNavbar } from "./styles";
 
 export default function MobileNavbar(){
-    const [menuState, setMenuState] = useState(false);
+    const [menuState, /*setMenuState*/] = useState(false);
     return (
         <StyledNavbar>
             <div className="mobile-nav">
                 <div className="logo">
-                    <a href="#">Logo</a>
+                    <Link to={'/'}>Logo</Link>
                 </div>
                 <div className={`collapse ${!menuState ? '' : ''}`}>
                     <ul className="menu">
-                    <li className="link"><a href="#">Home</a></li>
-                    <li className="link"><a href="#">About</a></li>
-                    <li className="link"><a href="#">Contact</a></li>
-                    <li className="link"><a href="#">Blog</a></li>
-                    <li className="link"><a href="#">Careers</a></li>
+                    <li className="link"><Link to={'/'}>Home</Link></li>
+                    <li className="link"><Link to={'/'}>About</Link></li>
+                    <li className="link"><Link to={'/'}>Contact</Link></li>
+                    <li className="link"><Link to={'/'}>Blog</Link></li>
+                    <li className="link"><Link to={'/'}>Careers</Link></li>
                     </ul>
-                    <a href="#"><div className="nav-btn">Request Invite</div></a>
+                    <Link to={'/'}><div className="nav-btn">Request Invite</div></Link>
                 </div>
                 {/* <img src={iconHamburger} className='hamburger' style={{ visibility: menuState ? 'hidden' : '' }} onClick={() => setMenuState(!menuState)} />
                 <img src={iconClose} className={`fa-times ${!menuState ? 'hidden' : ''}`} onClick={() => setMenuState(!menuState)} /> */}

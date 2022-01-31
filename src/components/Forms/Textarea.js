@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledTextarea, InputWrapper, LabelWrapper, StyledLabel } from "../Commons";
+import { StyledTextarea, LabelWrapper, StyledLabel } from "../Commons";
 
 export default function Textarea({value, onChange, name, placeholder}){
     return (
