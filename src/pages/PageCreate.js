@@ -25,7 +25,7 @@ export default function PageCreate(){
     const handlePageCreation = e => {
         e.preventDefault()
         axios
-        .post('http://localhost:8000/', { page })
+        .post('https://notion-integration-server.herokuapp.com/', { page })
         .then(res => console.log(res))
         .catch(error => console.log(error))
     }
