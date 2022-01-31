@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledInput } from '../Commons';
+import { InputWrapper, StyledInput } from '../Commons';
 
 export default function Input ({ 
     type, 

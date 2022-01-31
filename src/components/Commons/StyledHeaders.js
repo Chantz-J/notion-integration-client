@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledH1 = styled.h1`
     line-height: 1;
     font-size: 4.5rem;
+    font-size: ${props => props.theme.fontSizes[6]};
     color: #3eeaf1;
     color: ${props => props.theme.text.primary};
     max-width: 1024px;

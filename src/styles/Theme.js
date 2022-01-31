@@ -18,8 +18,8 @@ const light = {
   
   const dark = {
     bg: {
-      primary: /*'#1a1a54'*/ '#3901F1' ,
-      secondary: '#3eeaf1',
+      primary: /*'#1a1a54'*/ '#160042' ,
+      secondary: '#fff',
       inset: '#111111',
       input: 'rgba(191,193,201,0.12)',
     },
@@ -42,7 +42,7 @@ const light = {
       '22px', // 3
       '26px', // 4
       '32px', // 5
-      '40px', // 6
+      '60px', // 6
     ],
     fontWeights: {
       body: 400,

@@ -17,4 +17,9 @@ export const CSSReset = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }  
+
+  @keyframes gradient { 
+    0%{background-position:0 0}
+    100%{background-position:100% 0}
+  }
 `;

@@ -1,19 +1,33 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import MobileNavbar from './MobileNavbar';
+import { StyledNavbar } from './styles';
+import Button from '../Button';
 
-import DesktopNavbar from './DesktopNav';
-import MobileNavbar from './MobileNav';
 
-const Nav = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-`;
-
-export default function Navbar({ themeToggle }){
+export default function Navbar({ themeToggle, colorScheme }){
     return (
-        <Nav>
-            <DesktopNavbar themeToggle={themeToggle}/>
-            <MobileNavbar themeToggle={themeToggle}/>
-        </Nav>
+        <StyledNavbar themeToggle={themeToggle}>
+            <div className="navbg">
+                <div className="nav-container">
+                    <nav className="navbar">
+                    <div className="logo">
+                        <Link to={"/"}>LOGO</Link>
+                    </div>
+                    <ul className="menu">
+                        <li className="link"><Link to={"/"}>Home</Link></li>
+                        <li className="link"><Link to={"/"}>About</Link></li>
+                        <li className="link"><Link to={"/"}>Contact</Link></li>
+                        <li className="link"><Link to={"/"}>Blog</Link></li>
+                    </ul>
+                    <Button 
+                        text={colorScheme === 'light' ? '🌚' : '🌞'} 
+                        onClick={themeToggle} 
+                    />
+                    </nav>
+                </div>
+            <MobileNavbar />
+            </div>
+        </StyledNavbar>
     )
 }
