@@ -5,10 +5,11 @@ import Textarea from '../components/Forms/Textarea';
 import Button from '../components/Button';
 import axios from 'axios';
 
+
 const PAGE_STATE = {
     pageTitle: '',
-    cover: '',
     emoji: '',
+    cover: '',
     selection: '',
     content: '',
   }
@@ -19,15 +20,15 @@ export default function PageCreate(){
     const handleChange = e => {
         const { name, value } = e.target
         setPage({ ...page, [name]: value});
-    
     }
     
     const handlePageCreation = e => {
         e.preventDefault()
         axios
-        .post('https://notion-integration-server.herokuapp.com/', { page })
+        .post(' https://notion-integration-server.herokuapp.com/', { page })
         .then(res => console.log(res))
         .catch(error => console.log(error))
+        
     }
     return (
       <FlexColumn>
