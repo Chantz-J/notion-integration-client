@@ -6,8 +6,8 @@ export const NotionCreatePage = data => {
         // e.preventDefault()
         dispatch({type: notionTypes.START_ADD_NEW_PAGE});
         await axios
-        .post('http://localhost:8080/',  data )
-        // .post('https://notion-integration-server.herokuapp.com/', { data })
+        // .post('http://localhost:8080/',  data )
+        .post('https://notion-integration-server.herokuapp.com/', data )
         .then(res => {
             dispatch({
                 type: notionTypes.NEW_PAGE_ADDED,
