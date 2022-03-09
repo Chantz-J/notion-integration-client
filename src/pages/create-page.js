@@ -93,7 +93,7 @@ export default function CreatePage(){
                     <a 
                       style={{ marginLeft: '0.4rem'}}
                       target='_blank'
-                      href="https://www.notion.so/994c24e36390405dbb3a69c044596817?v=a0786629e0614375a9755bfd1cc28c8c" 
+                      href="https://blush-quail-c06.notion.site/994c24e36390405dbb3a69c044596817?v=a0786629e0614375a9755bfd1cc28c8c" 
                       rel="noreferrer"
                     >
                       here.
