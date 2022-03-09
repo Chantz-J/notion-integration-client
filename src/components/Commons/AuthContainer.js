@@ -6,7 +6,7 @@ export const AuthWrapper = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 `;
 
 export const InputWrapper = styled.div`
@@ -23,7 +23,7 @@ export const LabelWrapper = styled.div`
 
 export const StyledLabel = styled.label`
 -webkit-box-align: center;
-    align-items: center;
+    align-items: flex-start;
     font-weight: 600;
     padding: 6px 0px;
     font-size: 14px;
@@ -41,10 +41,10 @@ export const StyledTextarea = styled.textarea`
     border-radius: 6px;
     background: ${props => props.theme.bg.primary};
     width: 100%;
-    min-height: 500px;
     color: ${props => props.theme.text.primary};
     font-size: ${props => props.theme.fontSizes[0]};
     line-height: 2.4rem;
+    min-height: 200px;
 
     &::-webkit-input-placeholder {
         color: ${props => props.theme.bg.tertiary};
