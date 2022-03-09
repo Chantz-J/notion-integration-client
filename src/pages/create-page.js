@@ -97,6 +97,7 @@ export default function CreatePage(){
               :
               <Button 
                 text={submitting ? 'Submitting to Notion...' : 'Create New Page ✍🏽'}
+                disabled={submitting ? true : false }
                 background={submitting ? 'rgb(57 1 241 / 38%)' : ''} 
               />
             } 
