@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
 import { 
   FlexColumn, 
   Container,  
@@ -47,62 +48,68 @@ export default function CreatePage(){
     }
     
     return (
-      <FlexColumn>
-        <Container style={{justifyContent: 'center'}}>
-          <AuthWrapper onSubmit={handlePageCreation}>
-            <StyledH1>Start creating here.</StyledH1>
-            <LabelWrapper>
-              <StyledLabel>What's the page title?</StyledLabel>
-            </LabelWrapper>
-            <Input 
-              type='text'
-              value={page.pageTitle}
-              onInput={handleChange}
-              name='pageTitle'
-            />
-            
-            <Textarea 
-              type='text'
-              value={page.content}
-              onChange={handleChange}
-              name='content'
-            >
-            </Textarea>
-
-            <StyledSelect 
-              type='text' 
-              value={page.selection} 
-              onInput={handleChange} 
-              name='selection'
-            >
-              <StyledOption value="Not Specified">Not Specified</StyledOption>
-              <StyledOption value="Error Code">Error Code</StyledOption>
-              <StyledOption value="Expected Behavior">Expected Behavior</StyledOption>
-              <StyledOption value="Unexpected Behavior">Unexpected Behavior</StyledOption>
-            </StyledSelect>
-            {
-              submitted ? 
-              <>
-                <p style={{ color: 'green', textAlign: 'center'}}>Thanks for your Submission! For now, if you would like to submit again, please refresh the page. Or, take a look at your page
-                  <a 
-                    style={{ marginLeft: '0.4rem'}}
-                    target='_blank'
-                    href="https://www.notion.so/994c24e36390405dbb3a69c044596817?v=a0786629e0614375a9755bfd1cc28c8c" 
-                    rel="noreferrer"
-                  >
-                    here.
-                  </a>
-                </p>
-              </>
-              :
-              <Button 
-                text={submitting ? 'Submitting to Notion...' : 'Create New Page ✍🏽'}
-                disabled={submitting ? true : false }
-                background={submitting ? 'rgb(57 1 241 / 38%)' : ''} 
+      <>
+      <SEO 
+        title={'Create Page | Recharge Notion Integration'} 
+        description={'Have a topic? Complete the form and submit you expertise!'}
+      />
+        <FlexColumn>
+          <Container style={{justifyContent: 'center'}}>
+            <AuthWrapper onSubmit={handlePageCreation}>
+              <StyledH1>Start creating here.</StyledH1>
+              <LabelWrapper>
+                <StyledLabel>What's the page title?</StyledLabel>
+              </LabelWrapper>
+              <Input 
+                type='text'
+                value={page.pageTitle}
+                onInput={handleChange}
+                name='pageTitle'
               />
-            } 
-          </AuthWrapper>
-        </Container>
-      </FlexColumn>
-    )
-}
+              
+              <Textarea 
+                type='text'
+                value={page.content}
+                onChange={handleChange}
+                name='content'
+              >
+              </Textarea>
+
+              <StyledSelect 
+                type='text' 
+                value={page.selection} 
+                onInput={handleChange} 
+                name='selection'
+              >
+                <StyledOption value="Not Specified">Not Specified</StyledOption>
+                <StyledOption value="Error Code">Error Code</StyledOption>
+                <StyledOption value="Expected Behavior">Expected Behavior</StyledOption>
+                <StyledOption value="Unexpected Behavior">Unexpected Behavior</StyledOption>
+              </StyledSelect>
+              {
+                submitted ? 
+                <>
+                  <p style={{ color: 'green', textAlign: 'center'}}>Thanks for your Submission! For now, if you would like to submit again, please refresh the page. Or, take a look at your page
+                    <a 
+                      style={{ marginLeft: '0.4rem'}}
+                      target='_blank'
+                      href="https://www.notion.so/994c24e36390405dbb3a69c044596817?v=a0786629e0614375a9755bfd1cc28c8c" 
+                      rel="noreferrer"
+                    >
+                      here.
+                    </a>
+                  </p>
+                </>
+                :
+                <Button 
+                  text={submitting ? 'Submitting to Notion...' : 'Create New Page ✍🏽'}
+                  disabled={submitting ? true : false }
+                  background={submitting ? 'rgb(57 1 241 / 38%)' : ''} 
+                />
+              } 
+            </AuthWrapper>
+          </Container>
+        </FlexColumn>
+      </>
+    );
+};
