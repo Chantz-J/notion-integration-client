@@ -3,6 +3,7 @@ import React from 'react';
 export default function Knowledge(){
     return (
         <svg 
+        style={{ height: '450px'}}
         xmlns="http://www.w3.org/2000/svg" 
         data-name="Layer 1" 
         width="538.71458" 

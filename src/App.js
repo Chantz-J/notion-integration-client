@@ -5,10 +5,9 @@ import useColorScheme from './styles/ColorScheme';
 import { darkTheme, lightTheme } from './styles/Theme';
 
 import  MainLayout  from './layouts/MainLayout'
-import  PageCreate from './pages/PageCreate'
-import LandingPage from './pages/LandingPage'
+import  CreatePage from './pages/create-page'
+import Home from './pages/home'
  
-
 export default function App() {
   const [colorScheme, toggleColorScheme] = useColorScheme()
   const theme = colorScheme === 'light' ? lightTheme : darkTheme
@@ -24,7 +23,7 @@ export default function App() {
                 themeToggle={toggleColorScheme}
                 colorScheme={colorScheme}
               >
-                <LandingPage />
+                <Home />
               </MainLayout>
           }/>
           <Route 
@@ -34,7 +33,7 @@ export default function App() {
                 themeToggle={toggleColorScheme}
                 colorScheme={colorScheme}
               >
-                <PageCreate />
+                <CreatePage />
               </MainLayout>
           }/>
         </Routes>

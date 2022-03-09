@@ -13,10 +13,7 @@ export default function MobileNavbar(){
                 <div className={`collapse ${!menuState ? '' : ''}`}>
                     <ul className="menu">
                     <li className="link"><Link to={'/'}>Home</Link></li>
-                    <li className="link"><Link to={'/'}>About</Link></li>
-                    <li className="link"><Link to={'/'}>Contact</Link></li>
-                    <li className="link"><Link to={'/'}>Blog</Link></li>
-                    <li className="link"><Link to={'/'}>Careers</Link></li>
+                    <li className="link"><Link to={'/create-page'}>Create</Link></li>
                     </ul>
                     <Link to={'/'}><div className="nav-btn">Request Invite</div></Link>
                 </div>
