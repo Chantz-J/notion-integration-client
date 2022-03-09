@@ -26,7 +26,7 @@ export const StyledNavbar = styled.div`
             align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+            justify-content: space-around;
     max-width: 1440px;
     width: 100%;
     height: 60px;

@@ -53,7 +53,7 @@ export default function CreatePage(){
         title={'Create Page | Recharge Notion Integration'} 
         description={'Have a topic? Complete the form and submit you expertise!'}
       />
-        <FlexColumn>
+        <FlexColumn style={{ padding: '20px 0' }}>
           <Container style={{justifyContent: 'center'}}>
             <AuthWrapper onSubmit={handlePageCreation}>
               <StyledH1>Start creating here.</StyledH1>
