@@ -35,7 +35,7 @@ export default function CreatePage(){
     const dispatch = useDispatch()
     const [page, setPage] = useState(PAGE_STATE)
 
-    const { submitted, submitting } = useSelector(mapState)
+    const { submitting } = useSelector(mapState)
 
     const handleChange = e => {
         const { name, value } = e.target
@@ -43,8 +43,9 @@ export default function CreatePage(){
     }
     
     const handlePageCreation = e => {
-        e.preventDefault()
+        e.preventDefault();
         dispatch(NotionCreatePage({ page }));
+        setPage(PAGE_STATE);
     }
     
     return (
@@ -65,6 +66,7 @@ export default function CreatePage(){
                 value={page.pageTitle}
                 onInput={handleChange}
                 name='pageTitle'
+                required={true}
               />
               
               <Textarea 
@@ -72,6 +74,7 @@ export default function CreatePage(){
                 value={page.content}
                 onChange={handleChange}
                 name='content'
+                required={true}
               >
               </Textarea>
 
@@ -86,27 +89,12 @@ export default function CreatePage(){
                 <StyledOption value="Expected Behavior">Expected Behavior</StyledOption>
                 <StyledOption value="Unexpected Behavior">Unexpected Behavior</StyledOption>
               </StyledSelect>
-              {
-                submitted ? 
-                <>
-                  <p style={{ color: 'green', textAlign: 'center'}}>Thanks for your Submission! For now, if you would like to submit again, please refresh the page. Or, take a look at your page
-                    <a 
-                      style={{ marginLeft: '0.4rem'}}
-                      target='_blank'
-                      href="https://blush-quail-c06.notion.site/994c24e36390405dbb3a69c044596817?v=a0786629e0614375a9755bfd1cc28c8c" 
-                      rel="noreferrer"
-                    >
-                      here.
-                    </a>
-                  </p>
-                </>
-                :
-                <Button 
-                  text={submitting ? 'Submitting to Notion...' : 'Create New Page ✍🏽'}
-                  disabled={submitting ? true : false }
-                  background={submitting ? 'rgb(57 1 241 / 38%)' : ''} 
-                />
-              } 
+              <Button 
+                text={submitting ? 'Submitting' : 'Create New Page ✍🏽'}
+                disabled={submitting ? true : false }
+                background={submitting ? 'rgb(57 1 241 / 38%)' : ''} 
+                cursor={ submitting ? 'not-allowed' : ''}
+              />
             </AuthWrapper>
           </Container>
         </FlexColumn>

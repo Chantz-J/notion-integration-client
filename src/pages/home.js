@@ -13,7 +13,6 @@ export default function Home(){
                     title={'Home | Recharge Notion Integration'} 
                     description={'A Notion Integration to post solutions to an easily-searchable database'}
                 />
-                <main>
                     <FlexColumn>
                         <Container>
                             <StyledH1>Quick & ad-hoc way to document complex merchant issues, and their solutions. 👋🏽</StyledH1>
@@ -29,7 +28,6 @@ export default function Home(){
                             />
                         </Container>
                     </FlexColumn>
-                </main>
              </>
     )
 }

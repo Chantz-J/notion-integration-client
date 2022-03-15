@@ -6,7 +6,9 @@ export default function Input ({
     value, 
     onInput, 
     name, 
-    placeholder}){
+    placeholder,
+    required
+}){
     return (
         <StyledInput 
             type={type} 
@@ -14,6 +16,7 @@ export default function Input ({
             onInput={onInput}
             name={name} 
             placeholder={placeholder}
+            required={required}
         />
-    )
-}
+    );
+};

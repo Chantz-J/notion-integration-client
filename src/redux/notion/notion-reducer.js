@@ -19,7 +19,7 @@ export const notionReducer = (state = INTIAL_STATE, action) => {
             return {
                 pageURL: action.payload,
                 submitting: false,
-                submitted: true,
+                // submitted: true,
             }
         case notionTypes.ERROR_ADDING_PAGE:
             return {

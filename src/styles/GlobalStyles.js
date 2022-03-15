@@ -18,6 +18,10 @@ export const CSSReset = createGlobalStyle`
       monospace;
   }  
 
+  textarea {
+    font-family: inherit;
+  }
+
   @keyframes gradient { 
     0%{background-position:0 0}
     100%{background-position:100% 0}

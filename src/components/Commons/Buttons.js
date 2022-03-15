@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledButton = styled.button`
     background: ${({ theme }) => theme.bg.secondary};
     background: rgb(57, 1, 241);
-    color: ${({ theme }) => theme.bg.primary};
+    color: #eff0f5;
     border: none;
     border-radius: 4px;
     display: inline-block;
