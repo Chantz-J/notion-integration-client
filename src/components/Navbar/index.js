@@ -6,7 +6,7 @@ import Button from '../Button';
 
 
 export default function Navbar({ themeToggle, colorScheme }){
-    const notionLink = 'https://blush-quail-c06.notion.site/994c24e36390405dbb3a69c044596817?v=a0786629e0614375a9755bfd1cc28c8c'
+    const notionLink = 'https://chance-and-the-moon-river.notion.site/a174fe989ad748579c3baa3702542b53?v=d8a6c07a8ed6435caa2259acd1037627'
     return (
         <StyledNavbar themeToggle={themeToggle}>
             <div className="navbg">

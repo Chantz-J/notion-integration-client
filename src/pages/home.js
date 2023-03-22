@@ -15,11 +15,11 @@ export default function Home(){
                 />
                     <FlexColumn>
                         <Container>
-                            <StyledH1>Quick & ad-hoc way to document complex merchant issues, and their solutions. 👋🏽</StyledH1>
+                            <StyledH1>Make a POST request to a Notion Database 👋🏽</StyledH1>
                             <Knowledge />
                         </Container>
                         <Container>
-                            <p>A Notion Integration to post solutions to an easily-searchable database</p>
+                            <p>Client app that will turn form data into a Notion Database item.</p>
                         </Container>
                         <Container>
                             <Button 
